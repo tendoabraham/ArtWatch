@@ -1,0 +1,687 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Views.LoginAndRegistration">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginStart="30dp">
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/logo6"/>
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:onClick="onSignInPressed"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:text="@string/signIn"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textGrey2" />
+
+
+                        <View
+                            android:id="@+id/view1"
+                            android:layout_width="45dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/teal_700" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:onClick="onSignUpPressed"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:text="@string/signUp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textGrey2" />
+
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_alignParentBottom="true"
+                            android:layout_width="50dp"
+                            android:layout_height="10dp"
+                            android:background="@color/teal_700"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp"/>
+                        </RelativeLayout>
+
+        </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/signin"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/welcomeText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:text="@string/Login"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginHorizontal="2dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textGrey2"
+                            android:textSize="34sp" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/email"
+                            android:paddingHorizontal="10dp"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rectangle"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/password"
+                            android:paddingHorizontal="10dp"
+                            android:inputType="textPassword"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <TextView
+                            android:id="@+id/forgotPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/khand_medium"
+                            android:layout_marginTop="20dp"
+                            android:textAlignment="viewEnd"
+                            android:text="@string/forgotPassword"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                            android:textColor="@color/orange" />
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="54dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:onClick="login"
+                            android:text="@string/Login" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="100dp"
+                    android:id="@+id/selectCategory"
+                    android:visibility="invisible"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/khand_semi_bold"
+                    android:text="@string/profession"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginHorizontal="2dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="@color/textGrey2"
+                    android:textSize="34sp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle"
+                    android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/artistrySpinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:background="@drawable/grey_line"
+                            android:padding="5dp" />
+
+                </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="80dp"
+                    android:visibility="invisible"
+                    android:layout_marginHorizontal="30dp"
+                    android:id="@+id/lawyerSignUp"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="20dp"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:text="@string/lawyerReg"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textGrey2"
+                            android:textSize="30sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/firstName1"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="50dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/firstName"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2" />
+
+                                <EditText
+                                    android:id="@+id/middleName1"
+                                    android:layout_width="0dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/middleName"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:id="@+id/lastName1"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/lastName"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:hint="@string/countryOfOrigin"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:textColorHint="@color/textGrey2"
+                                    android:textColor="@color/white"
+                                    android:id="@+id/countries1"
+                                    android:padding="5dp"
+                                    />
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/companyName"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/company"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <EditText
+                            android:id="@+id/contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/contact"
+                            android:inputType="phone"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+                        <Button
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="3dp"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:onClick="createLawyer"
+                            android:text="@string/Register" />
+
+                                <Button
+                                    android:id="@+id/outlinedButton"
+                                    android:layout_width="0dp"
+                                    android:layout_height="54dp"
+                                    android:fontFamily="@font/khand_semi_bold"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/cancel"
+                                    app:strokeColor="@color/teal_700"
+                                    android:onClick="onCancelBtn"
+                                    style="?attr/materialButtonOutlinedStyle"
+                                    />
+                        </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/signup"
+                    android:visibility="invisible"
+                    android:layout_marginTop="80dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/register"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/khand_semi_bold"
+                            android:text="@string/artistsRegistration"
+                            android:layout_marginBottom="20dp"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="@color/textGrey2"
+                            android:textSize="30sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="3dp"
+                            android:layout_gravity="center"
+                            app:cardCornerRadius="40dp">
+
+                                <ImageView
+                                    android:id="@+id/dpImageView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:scaleType="centerCrop"
+                                    android:onClick="onDpAction"
+                                    android:src="@drawable/user3" />
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:orientation="horizontal">
+
+                                <EditText
+                                    android:id="@+id/firstName"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="50dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/firstName"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2" />
+
+                                <EditText
+                                    android:id="@+id/middleName"
+                                    android:layout_width="0dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/middleName"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.5"
+                                    android:id="@+id/lastName"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:layout_marginTop="15dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/lastName"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:id="@+id/emailAddress"
+                            android:layout_height="50dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/email"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginTop="15dp"
+                                    android:id="@+id/datePicker"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/rectangle"
+                                    android:orientation="horizontal">
+
+                                        <EditText
+                                            android:layout_width="wrap_content"
+                                            android:id="@+id/dateOfBirth"
+                                            android:layout_height="50dp"
+                                            android:paddingHorizontal="10dp"
+                                            android:fontFamily="@font/khand_regular"
+                                            android:hint="@string/DOB"
+                                            android:textColor="@color/white"
+                                            android:textColorHint="@color/textGrey2" />
+
+                                        <ImageView
+                                            android:layout_width="30dp"
+                                            android:layout_height="20dp"
+                                            android:layout_marginStart="4dp"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/date1" />
+
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="15dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:background="@drawable/rectangle"
+                                    android:orientation="horizontal">
+
+                                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                            android:layout_width="0dp"
+                                       android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1"
+                                            android:padding="5dp"
+                                            android:hint="@string/countryOfOrigin"
+                                            android:fontFamily="@font/khand_regular"
+                                            android:textColorHint="@color/textGrey2"
+                                            android:textColor="@color/white"
+                                            android:id="@+id/countries"
+                                            />
+
+                                </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                                        <EditText
+                                            android:layout_width="0dp"
+                                            android:id="@+id/socialSecNo"
+                                            android:layout_weight="1"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="15dp"
+                                            android:layout_marginEnd="4dp"
+                                            android:background="@drawable/rectangle"
+                                            android:paddingHorizontal="10dp"
+                                            android:fontFamily="@font/khand_regular"
+                                            android:hint="@string/ssn"
+                                            android:textColor="@color/white"
+                                            android:textColorHint="@color/textGrey2" />
+
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="50dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="15dp"
+                                    android:paddingHorizontal="10dp"
+                                    android:background="@drawable/rectangle"
+                                    android:orientation="horizontal">
+                                        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_weight="1"
+                                            android:padding="5dp"
+                                            android:hint="@string/countryOfResidence"
+                                            android:fontFamily="@font/khand_regular"
+                                            android:textColorHint="@color/textGrey2"
+                                            android:textColor="@color/white"
+                                            android:id="@+id/countries2"
+                                            />
+                                </LinearLayout>
+                        </LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/phoneNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/phonenumber"
+                            android:inputType="phone"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+
+                                        <EditText
+                                            android:id="@+id/address"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="50dp"
+                                            android:layout_marginTop="15dp"
+                                            android:background="@drawable/rectangle"
+                                            android:paddingHorizontal="10dp"
+                                            android:fontFamily="@font/khand_regular"
+                                            android:hint="@string/Address"
+                                            android:textColor="@color/white"
+                                            android:textColorHint="@color/textGrey2" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <EditText
+                                    android:id="@+id/nextOfKin"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="4dp"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:hint="@string/NOK"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2"/>
+
+                                <EditText
+                                    android:id="@+id/nextOfKinPhoneNumber"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="15dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_height="50dp"
+                                    android:background="@drawable/rectangle"
+                                    android:paddingHorizontal="10dp"
+                                    android:fontFamily="@font/khand_regular"
+                                    android:inputType="phone"
+                                    android:hint="@string/NOKPhone"
+                                    android:textColor="@color/white"
+                                    android:textColorHint="@color/textGrey2"/>
+                        </LinearLayout>
+
+                        <EditText
+                            android:id="@+id/descriptionOfWork"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:gravity="top"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:paddingTop="10dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/description"
+                            android:inputType="textMultiLine"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <EditText
+                            android:id="@+id/password"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/password"
+                            android:inputType="textPassword"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2" />
+
+                        <EditText
+                            android:id="@+id/confirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/rectangle"
+                            android:paddingHorizontal="10dp"
+                            android:fontFamily="@font/khand_regular"
+                            android:hint="@string/confirmPassword"
+                            android:inputType="textPassword"
+                            android:textColor="@color/white"
+                            android:textColorHint="@color/textGrey2"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:orientation="horizontal">
+                                <Button
+                                    android:layout_width="0dp"
+                                    android:layout_height="54dp"
+                                    android:layout_weight="1"
+                                    android:layout_marginEnd="3dp"
+                                    android:fontFamily="@font/khand_semi_bold"
+                                    android:onClick="createArtist"
+                                    android:text="@string/Register" />
+
+                                <Button
+                                    android:id="@+id/outlinedButton2"
+                                    android:layout_width="0dp"
+                                    android:layout_height="54dp"
+                                    android:fontFamily="@font/khand_semi_bold"
+                                    android:layout_marginStart="3dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/cancel"
+                                    android:onClick="onCancelBtn"
+                                    app:strokeColor="@color/teal_700"
+                                    style="?attr/materialButtonOutlinedStyle"
+                                    />
+                        </LinearLayout>
+                </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

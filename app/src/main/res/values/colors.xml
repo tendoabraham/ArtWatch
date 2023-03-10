@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="orange">#fa9c00</color>
+    <color name="hintColor">#e4e3e2</color>
+    <color name="sky">#f1f2f5</color>
+    <color name="grey">#e7e2de</color>
+    <color name="maroon">#832126</color>
+    <color name="red">#e23636</color>
+    <color name="limegreen">#a3bf18</color>
+<!--    <color name="textGrey2">#797a7c</color>-->
+    <color name="textGrey2">#FFFFFF</color>
+    <color name="textGrey3">#797a7c</color>
+    <color name="darkBlack">#1f1f1f</color>
+    <color name="darkGrey">#121212</color>
+    <color name="cardDarkGrey">#1d1d1d</color>
+    <color name="darkText">#909090</color>
+    <color name="darkHeadlineText">#f6f6f6</color>
+    <color name="grey1">#232323</color>
+    <color name="grey2">#131313</color>
+    <color name="grey3">#272727</color>
+    <color name="dialogBackground">#40000000</color>
+    <color name="bg">#333333</color>
+</resources>

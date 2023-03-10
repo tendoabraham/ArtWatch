@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_dashboard"
+        android:fontFamily="@font/khand_regular"
+        android:icon="@drawable/incident"
+        android:title="@string/feedback"/>
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/navhome"
+        android:fontFamily="@font/khand_regular"
+        android:title="@string/title_home"/>
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:fontFamily="@font/khand_regular"
+        android:icon="@drawable/profile2"
+        android:title="@string/profile"/>
+    <item
+        android:id="@+id/navigation_info"
+        android:fontFamily="@font/khand_regular"
+        android:icon="@drawable/menu1"
+        android:title="@string/info"/>
+
+</menu>

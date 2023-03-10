@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Views.Incident">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:onClick="onbackPressed"
+            android:layout_gravity="center"
+            android:src="@drawable/back3" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/incident"
+            android:fontFamily="@font/khand_semi_bold"
+            android:textAlignment="center"
+            android:textColor="@color/orange"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/menu_black" />
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/grey2"
+        android:layout_marginHorizontal="20dp">
+
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_gravity="center"
+            android:id="@+id/accountsSpinner"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/darkBlack"
+                android:fontFamily="@font/khand_regular"
+                android:hint="@string/fullname"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textGrey2" />
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/darkBlack"
+                android:fontFamily="@font/khand_regular"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textGrey2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/phone"
+                    android:layout_width="0dp"
+                    android:layout_height="60dp"
+                    android:layout_weight="1.3"
+                    android:backgroundTint="@color/darkBlack"
+                    android:fontFamily="@font/khand_regular"
+                    android:hint="@string/phonenumber"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/textGrey2"/>
+
+                <Spinner
+                    android:id="@+id/contactSpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:background="@drawable/grey_line"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/riskSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:background="@drawable/grey_line"
+                android:padding="5dp" />
+
+            <EditText
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/darkBlack"
+                android:fontFamily="@font/khand_regular"
+                android:hint="@string/location"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textGrey2" />
+
+
+            <EditText
+                android:id="@+id/otherContact"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/darkBlack"
+                android:fontFamily="@font/khand_regular"
+                android:hint="@string/bestWay"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textGrey2" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/grey2"
+        android:layout_marginHorizontal="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:hint="@string/typeamessage"
+                android:textColorHint="@color/textGrey2"
+                android:layout_gravity="top"
+                android:fontFamily="@font/khand_regular"
+                android:layout_margin="15dp"
+                android:backgroundTint="@color/sky"
+                android:textColor="@color/white"
+                android:gravity="top"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_margin="20dp"
+        android:text="@string/submit"
+        android:fontFamily="@font/khand_semi_bold"
+        android:onClick="createIncident"
+       />
+
+    </LinearLayout>
+</ScrollView>
